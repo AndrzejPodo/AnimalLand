@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="io.github.1tchy.java9modular.org.apache.commons:commons-compress:1.19.0" type="repository">
+    <properties maven-id="io.github.1tchy.java9modular.org.apache.commons:commons-compress:1.19.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/1tchy/java9modular/org/apache/commons/commons-compress/1.19.0/commons-compress-1.19.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
