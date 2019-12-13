@@ -23,7 +23,6 @@ public class Plant implements MapElement, Observable{
         return 1;
     }
 
-
     @Override
     public void notifyPositionChange(Vector2d oldPosition) {
 
@@ -44,5 +43,10 @@ public class Plant implements MapElement, Observable{
     @Override
     public void removeObserver(Observer observer) {
         observers.remove(observer);
+    }
+
+    @Override
+    public String toString() {
+        return "P";
     }
 }

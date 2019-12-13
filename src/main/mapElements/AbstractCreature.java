@@ -4,6 +4,7 @@ import main.map.Observer;
 import main.structures.Vector2d;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public abstract class AbstractCreature implements MapElement, Observable {
 
@@ -11,7 +12,7 @@ public abstract class AbstractCreature implements MapElement, Observable {
     protected int energy;
 
 
-    protected LinkedList<Observer> observers;
+    protected List<Observer> observers = new LinkedList<>();
 
     public void notifyPositionChange(Vector2d oldPosition){
         for(Observer observer : observers){
@@ -37,7 +38,15 @@ public abstract class AbstractCreature implements MapElement, Observable {
         return position;
     }
 
+    public void setPosition(Vector2d position){
+        this.position = position;
+    }
+
     public int getEnergy() {
         return energy;
+    }
+
+    public void setEnergy(int energy){
+        this.energy = energy;
     }
 }

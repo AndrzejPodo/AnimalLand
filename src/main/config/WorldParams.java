@@ -4,8 +4,8 @@ public class WorldParams {
 
     private static WorldParams worldParams = null;
 
-    public final int mapWidth = 100;
-    public final int mapHeight = 30;
+    public final int mapWidth = 30;
+    public final int mapHeight = 10;
     private int energyPerMove = 1;
     private int plantPerJungle = 1;
     private int plantPerDesert = 1;

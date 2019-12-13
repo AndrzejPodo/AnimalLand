@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31c0ef5d-68aa-48d6-9877-b8b58dbdef4f" name="Default Changelist" comment="" />
+    <list default="true" id="31c0ef5d-68aa-48d6-9877-b8b58dbdef4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/map/IMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/mechanics/Mechanics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/visualiser/MapVisualizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/AbstractCreature.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/AbstractCreature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/MapElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/MapElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/config/WorldParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/WorldParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/map/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/WorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mapElements/AbstractCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/AbstractCreature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mapElements/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mapElements/MapElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/MapElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mapElements/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Plant.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,23 +28,33 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UnqxbnuQ2BKqtO7r2ERqR0OwU4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.visualiser" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -73,5 +100,27 @@
       <updated>1576002954413</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/mechanics/Mechanics.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
