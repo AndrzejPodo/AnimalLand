@@ -1,5 +1,6 @@
 package main.mapElements;
 
+import main.config.WorldParams;
 import main.map.Observer;
 import main.structures.Vector2d;
 
@@ -20,7 +21,7 @@ public class Plant extends AbstractCreature implements MapElement, Observable{
 
 
     public int getEnergy(){
-        return 1;
+        return this.energy;
     }
 
     @Override

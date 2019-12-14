@@ -28,7 +28,7 @@ public class WorldMap implements Observer, IMap {
         for(int i = 0; i < width; i++){
             for(int j = 0; j < height; j++){
                 map[i][j] = new LinkedList<>();
-                if( i >= width/4 && i <= 3*(width/4) &&  j >= height/4 && j <= 3*(height/4)){
+                if( i >= 2*width/8 && i <= 6*(width/8) &&  j >= 2*height/8 && j <= 6*(height/8)){
                     jungle.add(new Vector2d(i,j));
                 }else{
                     desert.add(new Vector2d(i,j));

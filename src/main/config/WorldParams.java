@@ -4,12 +4,12 @@ public class WorldParams {
 
     private static WorldParams worldParams = null;
 
-    public final int mapWidth = 30;
-    public final int mapHeight = 10;
+    public final int mapWidth = 80;
+    public final int mapHeight = 40;
     private int energyPerMove = 1;
-    private int plantPerJungle = 1;
-    private int plantPerDesert = 1;
-    private int plantEnergy = 100;
+    private int plantPerJungle = 2;
+    private int plantPerDesert = 2;
+    private int plantEnergy = 15;
 
 
     private WorldParams(){

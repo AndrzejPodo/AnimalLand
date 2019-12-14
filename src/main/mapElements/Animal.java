@@ -59,7 +59,9 @@ public class Animal extends AbstractCreature implements MapElement{
     }
 
     public void eat(Plant plant){
-        this.energy += plant.getEnergy();
+        int a = this.energy;
+        int b = plant.getEnergy();
+        this.setEnergy(a+b);
         plant.die();
     }
 

@@ -35,7 +35,7 @@ public class Mechanics {
         seedAPlant();
     }
 
-    private void seedAPlant(){
+    public void seedAPlant(){
         List<Vector2d> jungle = map.getJungle();
         List<Vector2d> desert = map.getDesert();
         int plantsPerJungle = WorldParams.getInstance().getPlantPerJungle();
@@ -91,7 +91,7 @@ public class Mechanics {
             strongest.eat(plant);
         }
 
-        if(strongest != null && secondStrongest != null && secondStrongest.getEnergy() >= 4 && strongest.getEnergy() >= 4){
+        if(strongest != null && secondStrongest != null && secondStrongest.getEnergy() >= 15 && strongest.getEnergy() >= 15){
             Animal child = strongest.reproduce(secondStrongest);
             map.placeElement(child);
         }

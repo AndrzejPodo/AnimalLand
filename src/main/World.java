@@ -8,35 +8,34 @@ import main.mapElements.Animal;
 import main.mechanics.Mechanics;
 import main.structures.Vector2d;
 
-import java.util.LinkedList;
+import java.util.Random;
 
 public class World {
     public static void main(String[] args) throws InterruptedException {
 
         IMap map = new WorldMap(WorldParams.getInstance().mapWidth, WorldParams.getInstance().mapHeight);
         Mechanics mechanics = new Mechanics(map);
-        Animal animal1 = new Animal(new Genes(), new Vector2d(5,5), 100);
-        Animal animal2 = new Animal(new Genes(), new Vector2d(4,4),100);
-        Animal animal3 =new Animal(new Genes(), new Vector2d(5,5), 100);
-        Animal animal4 = new Animal(new Genes(), new Vector2d(4,4), 100);
-        Animal animal5 = new Animal(new Genes(), new Vector2d(5,5), 100);
-        Animal animal6 = new Animal(new Genes(), new Vector2d(4,4),100);
-        Animal animal7 =new Animal(new Genes(), new Vector2d(5,5), 100);
-        Animal animal8 = new Animal(new Genes(), new Vector2d(4,4), 100);
-        map.placeElement(animal1);
-        map.placeElement(animal2);
-        map.placeElement(animal3);
-        map.placeElement(animal4);
-        map.placeElement(animal5);
-        map.placeElement(animal6);
-        map.placeElement(animal7);
-        map.placeElement(animal8);
 
-        for(int i = 0; i < 1000; i++){
-            System.out.println(map.getElements().size());
+        Animal myAnimal = new Animal(new Genes(), new Vector2d(35,15), 100);
+        map.placeElement(myAnimal);
+        Random rnd = new Random();
+        int x;
+        int y;
+        for(int i = 0; i< 4; i++){
+            mechanics.seedAPlant();
+        }
+        for(int i= 0; i < 100; i++){
+            x = rnd.nextInt(WorldParams.getInstance().mapWidth);
+            y = rnd.nextInt(WorldParams.getInstance().mapHeight);
+            map.placeElement(new Animal(new Genes(), new Vector2d(x,y), 40));
+        }
+
+        for(int i = 0; i < 10000; i++){
+            System.out.println(myAnimal.getEnergy());
             System.out.println(map);
             mechanics.update();
-            Thread.sleep(500,0);
+            Thread.sleep(10,0);
+            System.out.flush();
         }
     }
 }
