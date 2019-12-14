@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31c0ef5d-68aa-48d6-9877-b8b58dbdef4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/map/IMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/mechanics/Mechanics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/visualiser/MapVisualizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/AbstractCreature.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/AbstractCreature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/MapElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/MapElement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/config/WorldParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/WorldParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/map/IMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/IMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/map/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/WorldMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/mapElements/AbstractCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/AbstractCreature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/mapElements/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mapElements/MapElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/MapElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/mapElements/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mechanics/Mechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mechanics/Mechanics.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +100,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -117,8 +113,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/mechanics/Mechanics.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="10" />
+          <line>94</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

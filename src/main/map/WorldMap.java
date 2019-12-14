@@ -18,6 +18,8 @@ public class WorldMap implements Observer, IMap {
     private List<MapElement>[][] map;
     private HashSet<Vector2d> usedFields = new HashSet<>();
     private List<MapElement> elements = new LinkedList<>();
+    private List<Vector2d> jungle = new LinkedList<>();
+    private List<Vector2d> desert = new LinkedList<>();
 
     public WorldMap(int width, int height){
         this.width = width;
@@ -26,6 +28,11 @@ public class WorldMap implements Observer, IMap {
         for(int i = 0; i < width; i++){
             for(int j = 0; j < height; j++){
                 map[i][j] = new LinkedList<>();
+                if( i >= width/4 && i <= 3*(width/4) &&  j >= height/4 && j <= 3*(height/4)){
+                    jungle.add(new Vector2d(i,j));
+                }else{
+                    desert.add(new Vector2d(i,j));
+                }
             }
         }
     }
@@ -49,13 +56,21 @@ public class WorldMap implements Observer, IMap {
 
     @Override
     public List<MapElement> getElements() {
-        return this.elements;
+        return new LinkedList<>(this.elements);
+    }
+
+    public List<Vector2d> getDesert() {
+        return desert;
+    }
+
+    public List<Vector2d> getJungle() {
+        return jungle;
     }
 
     public List<List<MapElement>> getPopulatedFields(){
         List<List<MapElement>> fields = new LinkedList<>();
         for(Vector2d v : usedFields){
-            fields.add(map[v.x][v.y]);
+            fields.add(new LinkedList<>(map[v.x][v.y]));
         }
         return fields;
     }
@@ -64,6 +79,8 @@ public class WorldMap implements Observer, IMap {
     public void onMove(MapElement element, Vector2d oldPosition) {
         map[oldPosition.x%width][oldPosition.y%height].remove(element);
         map[element.getPosition().x%width][element.getPosition().y%height].add(element);
+        if(map[oldPosition.x%width][oldPosition.y%height].size() == 0) usedFields.remove(new Vector2d(oldPosition.x%width,oldPosition.y%height));
+        usedFields.add(new Vector2d(element.getPosition().x%width,element.getPosition().y%height));
     }
 
     @Override

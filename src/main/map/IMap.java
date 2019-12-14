@@ -11,6 +11,10 @@ public interface IMap {
 
     List<MapElement> getElements();
 
+    List<Vector2d> getJungle();
+
+    List<Vector2d> getDesert();
+
     void placeElement(MapElement element);
 
     boolean isOccupied(Vector2d position);

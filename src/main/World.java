@@ -11,32 +11,32 @@ import main.structures.Vector2d;
 import java.util.LinkedList;
 
 public class World {
-    public static void main(String[] args) {
-//        Animal animal1 = new Animal(new Genes(), new Vector2d(5,5), 100);
-//        Animal animal2 = new Animal(new Genes(), new Vector2d(5,5),100);
-//
-//        Animal animal3 = animal1.reproduce(animal2);
-//        Animal animal4 = animal2.reproduce(animal1);
-//
-//        LinkedList<Animal> linkedList = new LinkedList<>();
-//        linkedList.push(animal3);
-//        linkedList.push(animal4);
-//
-//        for(int i = 0; i < 10; i++){
-//            animal3.update();
-//            System.out.println(animal3);
-//        }
+    public static void main(String[] args) throws InterruptedException {
 
         IMap map = new WorldMap(WorldParams.getInstance().mapWidth, WorldParams.getInstance().mapHeight);
         Mechanics mechanics = new Mechanics(map);
-        Animal animal1 = new Animal(new Genes(), new Vector2d(5,5), 10);
-        Animal animal2 = new Animal(new Genes(), new Vector2d(4,4),10);
+        Animal animal1 = new Animal(new Genes(), new Vector2d(5,5), 100);
+        Animal animal2 = new Animal(new Genes(), new Vector2d(4,4),100);
+        Animal animal3 =new Animal(new Genes(), new Vector2d(5,5), 100);
+        Animal animal4 = new Animal(new Genes(), new Vector2d(4,4), 100);
+        Animal animal5 = new Animal(new Genes(), new Vector2d(5,5), 100);
+        Animal animal6 = new Animal(new Genes(), new Vector2d(4,4),100);
+        Animal animal7 =new Animal(new Genes(), new Vector2d(5,5), 100);
+        Animal animal8 = new Animal(new Genes(), new Vector2d(4,4), 100);
         map.placeElement(animal1);
         map.placeElement(animal2);
+        map.placeElement(animal3);
+        map.placeElement(animal4);
+        map.placeElement(animal5);
+        map.placeElement(animal6);
+        map.placeElement(animal7);
+        map.placeElement(animal8);
 
-        for(int i = 0; i < 13; i++){
+        for(int i = 0; i < 1000; i++){
+            System.out.println(map.getElements().size());
             System.out.println(map);
             mechanics.update();
+            Thread.sleep(500,0);
         }
     }
 }

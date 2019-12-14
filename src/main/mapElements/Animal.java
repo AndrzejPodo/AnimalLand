@@ -17,10 +17,9 @@ public class Animal extends AbstractCreature implements MapElement{
     private Genes genes;
 
     public Animal(Genes genes, Vector2d initialPosition, int initialEnergy){
+        super(initialPosition, initialEnergy);
         this.genes = genes;
         this.brain = new Brain(genes);
-        this.position = initialPosition;
-        this.energy = initialEnergy;
     }
 
     @Override

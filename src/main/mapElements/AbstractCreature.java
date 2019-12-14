@@ -14,6 +14,11 @@ public abstract class AbstractCreature implements MapElement, Observable {
 
     protected List<Observer> observers = new LinkedList<>();
 
+    public AbstractCreature(Vector2d position, int initialEnergy){
+        this.position = position;
+        this.energy = initialEnergy;
+    }
+
     public void notifyPositionChange(Vector2d oldPosition){
         for(Observer observer : observers){
             observer.onMove(this, oldPosition);

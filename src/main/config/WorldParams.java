@@ -9,6 +9,8 @@ public class WorldParams {
     private int energyPerMove = 1;
     private int plantPerJungle = 1;
     private int plantPerDesert = 1;
+    private int plantEnergy = 100;
+
 
     private WorldParams(){
 
@@ -24,6 +26,10 @@ public class WorldParams {
 
     public int getPlantPerJungle() {
         return plantPerJungle;
+    }
+
+    public int getPlantEnergy(){
+        return plantEnergy;
     }
 
     public static WorldParams getInstance(){

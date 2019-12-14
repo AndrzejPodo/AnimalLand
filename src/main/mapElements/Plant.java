@@ -6,18 +6,18 @@ import main.structures.Vector2d;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Plant implements MapElement, Observable{
+public class Plant extends AbstractCreature implements MapElement, Observable{
     List<Observer> observers = new LinkedList<>();
+
+    public Plant(Vector2d position, int initialEnergy) {
+        super(position, initialEnergy);
+    }
 
     @Override
     public void update() {
 
     }
 
-    @Override
-    public Vector2d getPosition() {
-        return null;
-    }
 
     public int getEnergy(){
         return 1;
@@ -47,6 +47,6 @@ public class Plant implements MapElement, Observable{
 
     @Override
     public String toString() {
-        return "P";
+        return "*";
     }
 }
