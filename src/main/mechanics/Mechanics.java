@@ -91,7 +91,10 @@ public class Mechanics {
             strongest.eat(plant);
         }
 
-        if(strongest != null && secondStrongest != null && secondStrongest.getEnergy() >= 15 && strongest.getEnergy() >= 15){
+        if(strongest != null && secondStrongest != null &&
+                secondStrongest.getEnergy() >= WorldParams.getInstance().getMinReproduceEnergy() &&
+                strongest.getEnergy() >= WorldParams.getInstance().getMinReproduceEnergy())
+        {
             Animal child = strongest.reproduce(secondStrongest);
             map.placeElement(child);
         }

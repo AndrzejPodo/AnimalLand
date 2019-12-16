@@ -1,10 +1,8 @@
 package main.map;
 
 import main.config.WorldParams;
-import main.mapElements.Animal;
 import main.mapElements.MapElement;
 import main.mapElements.Observable;
-import main.mapElements.Plant;
 import main.structures.Vector2d;
 import main.visualiser.MapVisualizer;
 
@@ -25,10 +23,14 @@ public class WorldMap implements Observer, IMap {
         this.width = width;
         this.height = height;
         map = new List[width][height];
+        double ratio = WorldParams.getInstance().getJungleToDesertRatio();
         for(int i = 0; i < width; i++){
             for(int j = 0; j < height; j++){
                 map[i][j] = new LinkedList<>();
-                if( i >= 2*width/8 && i <= 6*(width/8) &&  j >= 2*height/8 && j <= 6*(height/8)){
+                if( i >= (int)((double)(width)/2 - ((double)(width)*ratio)/2)
+                        && i <= (int)((double)(width)/2 + ((double)(width)*ratio)/2)
+                        &&  j >= (int)((double)(height)/2 - ((double)(height)*ratio)/2)
+                        && j <= (int)((double)(height)/2 + ((double)(height)*ratio)/2)){
                     jungle.add(new Vector2d(i,j));
                 }else{
                     desert.add(new Vector2d(i,j));

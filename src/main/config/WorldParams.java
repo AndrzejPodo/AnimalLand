@@ -1,35 +1,47 @@
 package main.config;
 
+import main.parser.JsonParamsParser;
+
 public class WorldParams {
 
     private static WorldParams worldParams = null;
 
-    public final int mapWidth = 80;
-    public final int mapHeight = 40;
-    private int energyPerMove = 1;
-    private int plantPerJungle = 2;
-    private int plantPerDesert = 2;
-    private int plantEnergy = 15;
-
+    Params params;
 
     private WorldParams(){
+        params = JsonParamsParser.parse();
+    }
 
+    public int getMapWidth(){
+        return params.mapWidth;
+    }
+
+    public int getMapHeight(){
+        return params.mapHeight;
+    }
+
+    public double getJungleToDesertRatio() {
+        return params.jungleToDesertRatio;
     }
 
     public int getEnergyPerMove() {
-        return energyPerMove;
+        return params.energyPerMove;
     }
 
     public int getPlantPerDesert() {
-        return plantPerDesert;
+        return params.plantPerDesert;
     }
 
     public int getPlantPerJungle() {
-        return plantPerJungle;
+        return params.plantPerJungle;
     }
 
     public int getPlantEnergy(){
-        return plantEnergy;
+        return params.plantEnergy;
+    }
+
+    public int getMinReproduceEnergy(){
+        return params.minReproduceEnergy;
     }
 
     public static WorldParams getInstance(){

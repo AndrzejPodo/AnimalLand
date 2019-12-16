@@ -35,12 +35,12 @@ public class Animal extends AbstractCreature implements MapElement{
                 orientation = orientation.next();
             }
             Vector2d oldPosition = position;
-            int x = (oldPosition.x < 0)?oldPosition.x+WorldParams.getInstance().mapWidth:oldPosition.x%WorldParams.getInstance().mapWidth;
-            int y = (oldPosition.y < 0)?oldPosition.y+WorldParams.getInstance().mapWidth:oldPosition.y%WorldParams.getInstance().mapWidth;
+            int x = (oldPosition.x < 0)?oldPosition.x+WorldParams.getInstance().getMapWidth():oldPosition.x%WorldParams.getInstance().getMapWidth();
+            int y = (oldPosition.y < 0)?oldPosition.y+WorldParams.getInstance().getMapHeight():oldPosition.y%WorldParams.getInstance().getMapHeight();
             oldPosition = new Vector2d(x,y);
             position = position.add(orientation.toUnitVector());
-            x = (position.x < 0)?position.x+WorldParams.getInstance().mapWidth:position.x%WorldParams.getInstance().mapWidth;
-            y = (position.y < 0)?position.y+WorldParams.getInstance().mapWidth:position.y%WorldParams.getInstance().mapWidth;
+            x = (position.x < 0)?position.x+WorldParams.getInstance().getMapWidth():position.x%WorldParams.getInstance().getMapWidth();
+            y = (position.y < 0)?position.y+WorldParams.getInstance().getMapHeight():position.y%WorldParams.getInstance().getMapHeight();
             position = new Vector2d(x,y);
             notifyPositionChange(oldPosition);
         }
