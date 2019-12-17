@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31c0ef5d-68aa-48d6-9877-b8b58dbdef4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/config/Params.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/parser/JsonParamsParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/simulation/Simulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/visualiser/FXVisualizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnimalLand.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalLand.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/config/WorldParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/config/WorldParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/map/WorldMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/map/WorldMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mechanics/Mechanics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mechanics/Mechanics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/WorldParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/WorldParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/map/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/WorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mapElements/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mechanics/Mechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mechanics/Mechanics.java" afterDir="false" />
-    </list>
+    <list default="true" id="31c0ef5d-68aa-48d6-9877-b8b58dbdef4f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
