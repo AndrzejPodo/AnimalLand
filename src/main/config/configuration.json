@@ -1,8 +1,8 @@
 {
-  "mapWidth": 70,
-  "mapHeight": 30,
+  "mapWidth": 50,
+  "mapHeight": 25,
   "energyPerMove": 1,
-  "plantPerJungle": 2,
+  "plantPerJungle": 1,
   "plantPerDesert": 1,
   "plantEnergy": 10,
   "minReproduceEnergy": 15,

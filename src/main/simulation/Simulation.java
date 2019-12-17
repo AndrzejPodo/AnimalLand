@@ -1,5 +1,6 @@
 package main.simulation;
 
+import main.World;
 import main.config.WorldParams;
 import main.internalOrgans.Genes;
 import main.map.IMap;
@@ -7,16 +8,26 @@ import main.map.WorldMap;
 import main.mapElements.Animal;
 import main.mechanics.Mechanics;
 import main.structures.Vector2d;
+import main.visualiser.FXVisualizer;
 
 import java.util.Random;
 
 public class Simulation implements Runnable {
-    private IMap map;
+    private WorldMap map;
     private Mechanics mechanics;
-    private final int duration;
-    private final int refreshing;
+    private int duration;
+    private int refreshing;
 
     public Simulation(int duration, int initialAmountAnimals, int initialAmountPlants, int refreshing){
+        init(duration, initialAmountAnimals, initialAmountPlants, refreshing);
+    }
+
+    public Simulation(int duration, int initialAmountAnimals, int initialAmountPlants, int refreshing, FXVisualizer visualizer){
+        init(duration, initialAmountAnimals, initialAmountPlants, refreshing);
+        map.addObserver(visualizer);
+    }
+
+    private void init(int duration, int initialAmountAnimals, int initialAmountPlants, int refreshing){
         this.refreshing = refreshing;
         this.duration = duration;
         int x,y;
@@ -37,7 +48,7 @@ public class Simulation implements Runnable {
     public void run() {
         for(int i = 0; i < duration; i++){
             mechanics.update();
-            System.out.println(map);
+//            System.out.println(map);
             try {
                 Thread.sleep(refreshing,0);
             } catch (InterruptedException e) {
