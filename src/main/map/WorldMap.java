@@ -1,16 +1,13 @@
 package main.map;
 
 import main.config.WorldParams;
-import main.mapElements.Animal;
-import main.mapElements.MapElement;
+import main.mapElements.*;
 import main.mapElements.Observable;
-import main.mapElements.Plant;
-import main.structures.FieldType;
+import main.structures.FieldImage;
 import main.structures.Vector2d;
 import main.visualiser.MapObserver;
 import main.visualiser.MapVisualizer;
 
-import java.io.FileNotFoundException;
 import java.util.*;
 
 public class WorldMap implements Observer, IMap, ObservableMap {
@@ -50,12 +47,8 @@ public class WorldMap implements Observer, IMap, ObservableMap {
         map[element.getPosition().x%width][element.getPosition().y%height].add(element);
         usedFields.add(new Vector2d(element.getPosition().x%width, element.getPosition().y%height));
         elements.add(element);
-        if(element instanceof Plant){
-            notifyOnFieldChanged(element.getPosition(), FieldType.GRASS);
-        }
-        if(element instanceof Animal){
-            notifyOnFieldChanged(element.getPosition(), FieldType.ANIMAL);
-        }
+
+        updateField(element.getPosition());
     }
 
     @Override
@@ -64,7 +57,7 @@ public class WorldMap implements Observer, IMap, ObservableMap {
     }
 
     @Override
-    public Object objectAt(Vector2d position) {
+    public MapElement objectAt(Vector2d position) {
         return map[position.x][position.y].stream().max(Comparator.comparingInt(MapElement::getEnergy)).get();
     }
 
@@ -95,10 +88,12 @@ public class WorldMap implements Observer, IMap, ObservableMap {
         map[element.getPosition().x%width][element.getPosition().y%height].add(element);
         if(map[oldPosition.x%width][oldPosition.y%height].size() == 0){
             usedFields.remove(new Vector2d(oldPosition.x%width,oldPosition.y%height));
-            notifyOnFieldChanged(new Vector2d(oldPosition.x%width,oldPosition.y%height), FieldType.GROUND);
         }
         usedFields.add(new Vector2d(element.getPosition().x%width,element.getPosition().y%height));
-        notifyOnFieldChanged(new Vector2d(element.getPosition().x%width,element.getPosition().y%height), FieldType.ANIMAL);
+
+        updateField(element.getPosition());
+
+        updateField(oldPosition);
     }
 
     @Override
@@ -107,9 +102,9 @@ public class WorldMap implements Observer, IMap, ObservableMap {
         elements.remove(element);
         if(map[element.getPosition().x%width][element.getPosition().y%height].size() == 0){
             usedFields.remove(new Vector2d(element.getPosition().x%width,element.getPosition().y%height));
-            notifyOnFieldChanged(new Vector2d(element.getPosition().x%width,element.getPosition().y%height), FieldType.GROUND);
         }
-        notifyOnFieldChanged(new Vector2d(element.getPosition().x%width,element.getPosition().y%height), FieldType.GRASS);
+
+        updateField(element.getPosition());
     }
 
     @Override
@@ -117,10 +112,18 @@ public class WorldMap implements Observer, IMap, ObservableMap {
         return this.visualizer.draw(new Vector2d(0, 0), new Vector2d(this.width-1, this.height-1));
     }
 
+    private void updateField(Vector2d positon){
+        if(isOccupied(positon)){
+            notifyOnFieldChanged(objectAt(positon));
+        }else{
+            notifyOnFieldChanged(new Ground(positon));
+        }
+    }
+
     @Override
-    public void notifyOnFieldChanged(Vector2d position, FieldType newType){
+    public void notifyOnFieldChanged(MapElement element){
         for(MapObserver observer : observers){
-            observer.onFiledChanged(position, newType);
+            observer.onFiledChanged(element, element.getImage());
         }
     }
 

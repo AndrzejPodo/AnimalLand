@@ -19,7 +19,7 @@ public class World extends Application {
         MyPane pane = new MyPane(WorldParams.getInstance().getMapWidth()*20,WorldParams.getInstance().getMapHeight()*20, WorldParams.getInstance().getMapWidth(), WorldParams.getInstance().getMapHeight());
 
         FXVisualizer visualizer1 = new FXVisualizer(pane);
-        Simulation simulation1 = new Simulation(1000, 20, 200, 250, visualizer1);
+        Simulation simulation1 = new Simulation(10000, 20, 50, 500, visualizer1);
 
         Thread thread = new Thread(simulation1);
 
@@ -28,6 +28,5 @@ public class World extends Application {
         Scene scene = new Scene(pane);
         stage.setScene(scene);
         stage.show();
-
     }
 }

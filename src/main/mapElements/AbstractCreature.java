@@ -1,6 +1,7 @@
 package main.mapElements;
 
 import main.map.Observer;
+import main.structures.FieldImage;
 import main.structures.Vector2d;
 
 import java.util.LinkedList;
@@ -10,7 +11,6 @@ public abstract class AbstractCreature implements MapElement, Observable {
 
     protected Vector2d position;
     protected int energy;
-
 
     protected List<Observer> observers = new LinkedList<>();
 

@@ -2,23 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31c0ef5d-68aa-48d6-9877-b8b58dbdef4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/map/ObservableMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/structures/FieldType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/structures/MainNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/structures/MyPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/visualiser/MapObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/mapElements/Ground.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/structures/MyNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/HelloFX.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/config/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/config/configuration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/map/ObservableMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/map/ObservableMap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/map/WorldMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/map/WorldMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/MapElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/MapElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Plant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mapElements/Plant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/simulation/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/simulation/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HelloFX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/FieldType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/MainNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/MainNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/MyPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/MyPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/visualiser/FXVisualizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/visualiser/FXVisualizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/visualiser/MapObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/visualiser/MapObserver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/resources/animal.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/resources/animal.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/configuration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/map/ObservableMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/ObservableMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/map/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/WorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mapElements/AbstractCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/AbstractCreature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mapElements/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mapElements/MapElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/MapElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mapElements/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Plant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/simulation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/simulation/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/structures/FieldType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/structures/FieldImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/structures/MainNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/structures/MyPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/structures/MyPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/visualiser/FXVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/visualiser/FXVisualizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/visualiser/MapObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/visualiser/MapObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/animal.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +43,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -128,5 +141,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="element == null" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/map/WorldMap.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

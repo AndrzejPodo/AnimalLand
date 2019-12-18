@@ -2,6 +2,7 @@ package main.mapElements;
 
 import main.config.WorldParams;
 import main.map.Observer;
+import main.structures.FieldImage;
 import main.structures.Vector2d;
 
 import java.util.LinkedList;
@@ -22,6 +23,11 @@ public class Plant extends AbstractCreature implements MapElement, Observable{
 
     public int getEnergy(){
         return this.energy;
+    }
+
+    @Override
+    public FieldImage getImage() {
+        return FieldImage.GRASS;
     }
 
     @Override
@@ -48,6 +54,6 @@ public class Plant extends AbstractCreature implements MapElement, Observable{
 
     @Override
     public String toString() {
-        return "*";
+        return "Plant "+this.position.toString();
     }
 }

@@ -1,10 +1,9 @@
 package main.visualiser;
 
-import main.structures.FieldType;
+import main.mapElements.MapElement;
+import main.structures.FieldImage;
 import main.structures.Vector2d;
 
-import java.io.FileNotFoundException;
-
 public interface MapObserver {
-    void onFiledChanged(Vector2d position, FieldType newType);
+    void onFiledChanged(MapElement element, FieldImage newType);
 }

@@ -4,6 +4,7 @@ import main.World;
 import main.config.WorldParams;
 import main.internalOrgans.Brain;
 import main.internalOrgans.Genes;
+import main.structures.FieldImage;
 import main.structures.MapDirection;
 import main.structures.Rotation;
 import main.structures.Vector2d;
@@ -46,6 +47,11 @@ public class Animal extends AbstractCreature implements MapElement{
         }
     }
 
+    @Override
+    public FieldImage getImage() {
+        return FieldImage.ANIMAL;
+    }
+
     public Genes getGenes() {
         return genes;
     }
@@ -67,6 +73,6 @@ public class Animal extends AbstractCreature implements MapElement{
 
     @Override
     public String toString() {
-        return"A";
+        return"Animal "+this.position.toString()+" "+this.energy;
     }
 }

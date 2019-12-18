@@ -23,8 +23,9 @@ public class Simulation implements Runnable {
     }
 
     public Simulation(int duration, int initialAmountAnimals, int initialAmountPlants, int refreshing, FXVisualizer visualizer){
-        init(duration, initialAmountAnimals, initialAmountPlants, refreshing);
+        map = new WorldMap(WorldParams.getInstance().getMapWidth(), WorldParams.getInstance().getMapHeight());
         map.addObserver(visualizer);
+        init(duration, initialAmountAnimals, initialAmountPlants, refreshing);
     }
 
     private void init(int duration, int initialAmountAnimals, int initialAmountPlants, int refreshing){
@@ -32,7 +33,6 @@ public class Simulation implements Runnable {
         this.duration = duration;
         int x,y;
         Random random = new Random();
-        map = new WorldMap(WorldParams.getInstance().getMapWidth(), WorldParams.getInstance().getMapHeight());
         mechanics = new Mechanics(map);
         for(int i = 0; i< initialAmountPlants; i++){
             mechanics.seedAPlant();

@@ -1,13 +1,12 @@
 package main.structures;
 
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-public enum FieldType {
+public enum FieldImage {
 
     ANIMAL("animal", "animal.png"),
     GROUND("ground",  "ground.png"),
@@ -18,7 +17,7 @@ public enum FieldType {
     private String name;
     private Image img;
 
-    FieldType(String name, String imageName){
+    FieldImage(String name, String imageName){
         this.name = name;
         try {
             final FileInputStream input = new FileInputStream(resources + imageName);

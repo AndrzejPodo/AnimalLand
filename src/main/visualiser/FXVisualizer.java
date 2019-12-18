@@ -1,6 +1,7 @@
 package main.visualiser;
 
-import main.structures.FieldType;
+import main.mapElements.MapElement;
+import main.structures.FieldImage;
 import main.structures.MyPane;
 import main.structures.Vector2d;
 
@@ -14,7 +15,7 @@ public class FXVisualizer implements MapObserver{
     }
 
     @Override
-    public void onFiledChanged(Vector2d position, FieldType newType){
-        this.pane.updateNode(position, newType);
+    public void onFiledChanged(MapElement element, FieldImage newImage){
+        this.pane.updateNode(element, newImage);
     }
 }
