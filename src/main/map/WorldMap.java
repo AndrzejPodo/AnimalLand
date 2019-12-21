@@ -53,12 +53,12 @@ public class WorldMap implements Observer, IMap, ObservableMap {
 
     @Override
     public boolean isOccupied(Vector2d position) {
-        return map[position.x][position.y].size() != 0;
+        return map[position.x%width][position.y%height].size() != 0;
     }
 
     @Override
     public MapElement objectAt(Vector2d position) {
-        return map[position.x][position.y].stream().max(Comparator.comparingInt(MapElement::getEnergy)).get();
+        return map[position.x%width][position.y%height].stream().max(Comparator.comparingInt(MapElement::getEnergy)).get();
     }
 
     @Override
@@ -112,11 +112,11 @@ public class WorldMap implements Observer, IMap, ObservableMap {
         return this.visualizer.draw(new Vector2d(0, 0), new Vector2d(this.width-1, this.height-1));
     }
 
-    private void updateField(Vector2d positon){
-        if(isOccupied(positon)){
-            notifyOnFieldChanged(objectAt(positon));
+    private void updateField(Vector2d position){
+        if(isOccupied(position)){
+            notifyOnFieldChanged(objectAt(position));
         }else{
-            notifyOnFieldChanged(new Ground(positon));
+            notifyOnFieldChanged(new Ground(position));
         }
     }
 
@@ -135,5 +135,13 @@ public class WorldMap implements Observer, IMap, ObservableMap {
     @Override
     public void removeObserver(MapObserver observer) {
         observers.remove(observer);
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 }

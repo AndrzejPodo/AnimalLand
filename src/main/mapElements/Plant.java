@@ -1,6 +1,5 @@
 package main.mapElements;
 
-import main.config.WorldParams;
 import main.map.Observer;
 import main.structures.FieldImage;
 import main.structures.Vector2d;

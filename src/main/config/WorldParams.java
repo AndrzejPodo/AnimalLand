@@ -1,6 +1,7 @@
 package main.config;
 
 import main.parser.JsonParamsParser;
+import main.parser.Params;
 
 public class WorldParams {
 
@@ -42,6 +43,10 @@ public class WorldParams {
 
     public int getMinReproduceEnergy(){
         return params.minReproduceEnergy;
+    }
+
+    public int getStartEnergy(){
+        return this.params.startEnergy;
     }
 
     public static WorldParams getInstance(){

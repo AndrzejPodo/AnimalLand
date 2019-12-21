@@ -1,4 +1,4 @@
-package main.config;
+package main.parser;
 
 public class Params {
 
@@ -10,8 +10,9 @@ public class Params {
     public final int plantEnergy;
     public final int minReproduceEnergy;
     public final double jungleToDesertRatio;
+    public final int startEnergy;
 
-    public Params(int mapWidth, int mapHeight, int energyPerMove, int plantPerJungle, int plantPerDesert, int plantEnergy, int minReproduceEnergy, double jungleToDesertRatio){
+    public Params(int mapWidth, int mapHeight, int energyPerMove, int plantPerJungle, int plantPerDesert, int plantEnergy, int minReproduceEnergy, double jungleToDesertRatio, int startEnergy){
         this.mapWidth  = mapWidth;
         this.mapHeight = mapHeight;
         this.energyPerMove = energyPerMove;
@@ -20,5 +21,6 @@ public class Params {
         this.plantEnergy = plantEnergy;
         this.minReproduceEnergy = minReproduceEnergy;
         this.jungleToDesertRatio = jungleToDesertRatio;
+        this.startEnergy = startEnergy;
     }
 }

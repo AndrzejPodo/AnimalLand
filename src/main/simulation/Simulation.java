@@ -40,7 +40,7 @@ public class Simulation implements Runnable {
         for(int i= 0; i < initialAmountAnimals; i++){
             x = random.nextInt(WorldParams.getInstance().getMapWidth());
             y = random.nextInt(WorldParams.getInstance().getMapHeight());
-            map.placeElement(new Animal(new Genes(), new Vector2d(x,y), 40));
+            map.placeElement(new Animal(new Genes(), new Vector2d(x,y), WorldParams.getInstance().getStartEnergy()));
         }
     }
 

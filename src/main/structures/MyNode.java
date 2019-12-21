@@ -1,5 +1,6 @@
 package main.structures;
 
+import javafx.application.Platform;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
@@ -27,9 +28,14 @@ public class MyNode extends ImageView {
     }
 
     public void update(MapElement element, FieldImage image) {
-        System.out.println(element);
-        tooltip.setText(element.toString());
-        setImage(image.getImg());
-
+        if(Platform.isFxApplicationThread()){
+            tooltip.setText(element.toString());
+            setImage(image.getImg());
+        }else{
+            Platform.runLater(()->{
+                tooltip.setText(element.toString());
+                setImage(image.getImg());
+            });
+        }
     }
 }

@@ -1,16 +1,16 @@
 package main.parser;
 
-import main.config.Params;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 
 public class JsonParamsParser {
-    private static final String configurationLocation = "C:\\Users\\andrz\\IdeaProjects\\AnimalLand\\src\\main\\config\\configuration.json";
+    private static final String configurationLocation = "src/main/parameters.json".replace("/", File.separator);
 
     public static Params parse(){
         Params params = null;

@@ -16,10 +16,10 @@ public class World extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("Animal Land");
-        MyPane pane = new MyPane(WorldParams.getInstance().getMapWidth()*20,WorldParams.getInstance().getMapHeight()*20, WorldParams.getInstance().getMapWidth(), WorldParams.getInstance().getMapHeight());
+        MyPane pane = new MyPane(WorldParams.getInstance().getMapWidth()*10,WorldParams.getInstance().getMapHeight()*10, WorldParams.getInstance().getMapWidth(), WorldParams.getInstance().getMapHeight());
 
         FXVisualizer visualizer1 = new FXVisualizer(pane);
-        Simulation simulation1 = new Simulation(10000, 20, 50, 500, visualizer1);
+        Simulation simulation1 = new Simulation(10000, 50, 200, 20, visualizer1);
 
         Thread thread = new Thread(simulation1);
 

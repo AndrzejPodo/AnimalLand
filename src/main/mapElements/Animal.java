@@ -1,6 +1,5 @@
 package main.mapElements;
 
-import main.World;
 import main.config.WorldParams;
 import main.internalOrgans.Brain;
 import main.internalOrgans.Genes;

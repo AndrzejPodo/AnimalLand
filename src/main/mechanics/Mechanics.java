@@ -1,12 +1,11 @@
 package main.mechanics;
 
-import main.World;
 import main.config.WorldParams;
 import main.map.IMap;
-import main.map.WorldMap;
 import main.mapElements.Animal;
 import main.mapElements.MapElement;
 import main.mapElements.Plant;
+import main.structures.MapDirection;
 import main.structures.Vector2d;
 
 import java.util.*;
@@ -22,17 +21,19 @@ public class Mechanics {
     public void update(){
         List<MapElement> elements = map.getElements();//.stream().filter(element -> element instanceof Animal).
                                     //collect(Collectors.toCollection(LinkedList::new));
+        Collections.sort(elements, Comparator.comparingInt(MapElement::getEnergy));
+
         for(MapElement element : elements){
-            element.update();
+            element.update(); //usuniecie martwych, skret, przemieszczenie
         }
 
         List<List<MapElement>> fields = map.getPopulatedFields();
 
         for(List<MapElement> field : fields){
-            processFields(field);
+            processFields(field); //jedzenie i rozmnazanie zwierzat
         }
 
-        seedAPlant();
+        seedAPlant(); //dodanie nowych roslin
     }
 
     public void seedAPlant(){
@@ -64,40 +65,50 @@ public class Mechanics {
     }
 
     private void processFields(List<MapElement> elements){
-        Plant plant = null;
-        Animal strongest = null;
-        Animal secondStrongest = null;
-        Optional<MapElement> strongestOpt = elements.stream().filter(element -> element instanceof Animal).
-                max(Comparator.comparingInt(MapElement::getEnergy));
-        if (strongestOpt.isPresent()) {
-            strongest = (Animal) strongestOpt.get();
-            elements.remove(strongest);
-        }
-        Optional<MapElement>  secondStrongestOpt = elements.stream().filter(element -> element instanceof Animal).
-                max(Comparator.comparingInt(MapElement::getEnergy));
-        if (secondStrongestOpt.isPresent()) {
-            secondStrongest = (Animal) secondStrongestOpt.get();
-            elements.remove(secondStrongest);
-        }
+        List<MapElement> animals = elements.stream().filter(element -> element instanceof Animal).collect(Collectors.toList());
+        List<MapElement> plants = elements.stream().filter(element -> element instanceof Plant).collect(Collectors.toList());
 
-        for(MapElement element : elements){
-            if(element instanceof Plant){
-                plant = (Plant) element;
-                break;
+        Collections.sort(animals, Comparator.comparingInt(MapElement::getEnergy));
+
+        if(plants.size() > 0 && animals.size() > 0){
+            List<MapElement> strongestAnimals = animals.stream().filter(element -> element.getEnergy() == elements.get(elements.size()-1).getEnergy()).collect(Collectors.toList());
+            if(strongestAnimals.size() == 1){
+                ((Animal)strongestAnimals.get(0)).eat((Plant) plants.get(0));
+            }else {
+                for (MapElement animal : strongestAnimals) {
+                    ((Animal) animal).eat(new Plant(new Vector2d(0, 0), plants.get(0).getEnergy() / strongestAnimals.size()));
+                }
+                ((Plant)plants.get(0)).die();
             }
         }
 
-        if(plant != null && strongest != null){
-            strongest.eat(plant);
+        while (animals.size() >= 2){
+            Animal a1 = (Animal) animals.remove(animals.size()-1);
+            Animal a2 = (Animal) animals.remove(animals.size()-1);
+            reproduceAnimals(a1, a2);
         }
+    }
 
-        if(strongest != null && secondStrongest != null &&
-                secondStrongest.getEnergy() >= WorldParams.getInstance().getMinReproduceEnergy() &&
-                strongest.getEnergy() >= WorldParams.getInstance().getMinReproduceEnergy())
-        {
-            Animal child = strongest.reproduce(secondStrongest);
-            map.placeElement(child);
+    private void reproduceAnimals(Animal a1, Animal a2){
+        Random random = new Random();
+        if(a1 != null && a2 != null){
+            if(a1.getEnergy() >= WorldParams.getInstance().getMinReproduceEnergy()  && a2.getEnergy() >= WorldParams.getInstance().getMinReproduceEnergy()){
+                Animal child = a1.reproduce(a2);
+
+                List<MapDirection> freePlaces = new LinkedList<>();
+                for(MapDirection direction : MapDirection.values()){
+                    Vector2d neighbour = a1.getPosition().add(direction.toUnitVector());
+                    if(!map.isOccupied(new Vector2d((neighbour.x+map.getWidth())%map.getWidth(), (neighbour.y+map.getHeight())%map.getHeight()))){
+                        freePlaces.add(direction);
+                    }
+                }
+                if(freePlaces.size() != 0){
+                    MapDirection direction = freePlaces.get(random.nextInt(freePlaces.size()));
+                    Vector2d neighbour = a1.getPosition().add(direction.toUnitVector());
+                    child.setPosition(new Vector2d((neighbour.x+map.getWidth())%map.getWidth(), (neighbour.y+map.getHeight())%map.getHeight()));
+                    map.placeElement(child);
+                }
+            }
         }
-
     }
 }

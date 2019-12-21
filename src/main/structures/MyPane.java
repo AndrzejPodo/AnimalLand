@@ -8,8 +8,8 @@ public class MyPane extends GridPane {
     private MyNode[][] nodes;
 
     public MyPane(double width, double height, int rowCount, int columnCount) {
-        setHgap(1);
-        setVgap(1);
+        //setHgap(1);
+        //setVgap(1);
         nodes = new MyNode[rowCount][columnCount];
         for(int i = 0; i < rowCount; i++){
             for(int j = 0; j < columnCount; j++){

@@ -20,4 +20,8 @@ public interface IMap {
     boolean isOccupied(Vector2d position);
 
     Object objectAt(Vector2d position);
+
+    int getWidth();
+
+    int getHeight();
 }
