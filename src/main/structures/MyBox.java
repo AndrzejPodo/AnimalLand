@@ -5,13 +5,13 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import main.simulation.Simulation;
 
 public class MyBox  extends VBox {
     private Thread thread;
     private ButtonState buttonState = ButtonState.STOP;
 
-    public MyBox(MyPane pane, Thread thread){
-        this.thread = thread;
+    public MyBox(MyPane pane, Simulation thread){
         super.setAlignment(Pos.CENTER);
         super.setHeight(pane.getHeight()+20);
         Button stopStartButton = new Button(ButtonState.STOP.toString());
@@ -20,12 +20,12 @@ public class MyBox  extends VBox {
             public void handle(ActionEvent actionEvent) {
                 switch (buttonState){
                     case STOP:
-                        thread.suspend();
+                        thread.stop();
                         stopStartButton.setText(ButtonState.START.toString());
                         buttonState = ButtonState.START;
                         break;
                     case START:
-                        thread.resume();
+                        thread.start();
                         stopStartButton.setText(ButtonState.STOP.toString());
                         buttonState = ButtonState.STOP;
                         break;

@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31c0ef5d-68aa-48d6-9877-b8b58dbdef4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/structures/MyBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Scheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/config/Params.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/config/WorldParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/config/WorldParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/config/configuration.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/map/IMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/map/IMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/map/WorldMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/map/WorldMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/mechanics/Mechanics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/mechanics/Mechanics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/parser/JsonParamsParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/parser/JsonParamsParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/simulation/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/simulation/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/MyNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/MyNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/MyPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/structures/MyPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AnimalLand/main/visualiser/FXVisualizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnimalLand/main/visualiser/FXVisualizer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/Params.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/parser/Params.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/WorldParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/WorldParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/parameters.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/map/IMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/IMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/map/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/WorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mapElements/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mapElements/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mapElements/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mechanics/Mechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mechanics/Mechanics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/parser/JsonParamsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/parser/JsonParamsParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/simulation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/simulation/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/structures/MyNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/structures/MyNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/structures/MyPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/structures/MyPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/visualiser/FXVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/visualiser/FXVisualizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/structures/MyBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/structures/MyBox.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

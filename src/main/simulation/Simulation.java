@@ -12,25 +12,27 @@ import main.visualiser.FXVisualizer;
 
 import java.util.Random;
 
-public class Simulation implements Runnable {
+public class Simulation {
     private WorldMap map;
     private Mechanics mechanics;
     private int duration;
-    private int refreshing;
+    private boolean finished;
+    private boolean isRunning;
 
-    public Simulation(int duration, int initialAmountAnimals, int initialAmountPlants, int refreshing){
-        init(duration, initialAmountAnimals, initialAmountPlants, refreshing);
+    public Simulation(int duration, int initialAmountAnimals, int initialAmountPlants){
+        init(duration, initialAmountAnimals, initialAmountPlants);
     }
 
-    public Simulation(int duration, int initialAmountAnimals, int initialAmountPlants, int refreshing, FXVisualizer visualizer){
+    public Simulation(int duration, int initialAmountAnimals, int initialAmountPlants, FXVisualizer visualizer){
         map = new WorldMap(WorldParams.getInstance().getMapWidth(), WorldParams.getInstance().getMapHeight());
         map.addObserver(visualizer);
-        init(duration, initialAmountAnimals, initialAmountPlants, refreshing);
+        init(duration, initialAmountAnimals, initialAmountPlants);
     }
 
-    private void init(int duration, int initialAmountAnimals, int initialAmountPlants, int refreshing){
-        this.refreshing = refreshing;
+    private void init(int duration, int initialAmountAnimals, int initialAmountPlants){
         this.duration = duration;
+        this.isRunning = true;
+        this.finished = false;
         int x,y;
         Random random = new Random();
         mechanics = new Mechanics(map);
@@ -44,16 +46,29 @@ public class Simulation implements Runnable {
         }
     }
 
-    @Override
-    public void run() {
-        for(int i = 0; i < duration; i++){
-            mechanics.update();
-//            System.out.println(map);
-            try {
-                Thread.sleep(refreshing,0);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+    public boolean isRunning(){
+        return this.isRunning;
+    }
+
+    public void stop(){
+        this.isRunning = false;
+    }
+
+    public void start(){
+        if(duration>0)this.isRunning = true;
+    }
+
+    public void update(){
+        duration--;
+        mechanics.update();
+        if(duration == 0){
+            isRunning = false;
+            finished = true;
         }
     }
+
+    public boolean isFinished() {
+        return finished;
+    }
+
 }
